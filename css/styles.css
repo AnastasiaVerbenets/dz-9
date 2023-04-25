@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+}
+
+/* Завдання 1 */
+
+.box {
+    height: 150px;
+    width: 150px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.box:nth-child(1) {
+    background-color: #dd4153;
+
+}
+
+.box:nth-child(2) {
+    top: -65px;
+    left: 85px;
+    background-color: #5196da;
+
+    z-index: 1;
+}
+
+.box:nth-child(3) {
+    top: -140px;
+    left: 160px;
+    background-color: #8aeb8d;
+
+}
+
+/* Завдання 2 */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(186, 160, 94);
+}
+
+.thumb {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    background-color:  rgb(139, 137, 137);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    transform: translateX(-85%);
+    transition: transform 500ms ease;
+}
+
+.overlay:hover {
+    transform: translate(0);
+}
+
+.overlay-list {
+    list-style: none;
+    padding: 50px;
+}
+
+p {
+    writing-mode: vertical-rl;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 700ms ease;
+}
+
+.overlay:hover p {
+    opacity: 0;
+}
